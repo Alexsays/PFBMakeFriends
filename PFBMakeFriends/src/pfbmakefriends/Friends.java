@@ -14,7 +14,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.*;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
@@ -40,7 +40,7 @@ public class Friends extends Observable implements Runnable {
 
     @Override
     public void run() {
-        String form = "<form accept-charset=\"UTF-8\"></form>";   // TODO code application logic here
+        String form = "<form accept-charset=\"UTF-8\"></form>";
         String urlBase = "http://playfulbet.com";
         String url_action = "/users/sign_in";
         String method = "post";
